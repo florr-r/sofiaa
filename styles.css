@@ -1,0 +1,110 @@
+body {
+    font-family: 'Pacifico', cursive;
+    color: #333;
+    text-align: center;
+    padding: 50px;
+    overflow: hidden;
+    position: relative;
+    background-image: url('https://images.unsplash.com/photo-1515378812089-462453d3d4e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fGxvdmV8ZW58MHx8fHwxNjYyMjY0MjY0&ixlib=rb-1.2.1&q=80&w=1080');
+    background-size: cover;
+    background-position: center;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.heart {
+    position: absolute;
+    background-color: rgba(223, 183, 218, 0.5);
+    width: 50px;
+    height: 50px;
+    animation: float 5s infinite;
+    opacity: 0.7;
+}
+
+.square {
+    position: absolute;
+    background-color: rgba(135, 206, 250, 0.5);
+    width: 40px;
+    height: 40px;
+    animation: move 2s infinite ease-in-out;
+    opacity: 0.7;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(100vw);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    border: 2px solid #a26483;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #963f6b;
+    font-size: 2em;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ba739672;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Efek transisi */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Bayangan untuk efek kedalaman */
+}
+
+button:hover {
+    button:hover {
+        background-color: #62b8a8; /* Warna latar belakang saat hover */
+        transform: translateY(-2px); /* Efek mengangkat saat hover */
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Bayangan lebih dalam saat hover */
+    }
+}
+
+.quote {
+    font-size: 1.5em;
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px dashed #705b65;
+    border-radius: 5px;
+    background-color: rgba(255, 192, 203, 0.5);
+    transition: opacity 0.5s ease;
+}
